@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="A DunderMifflin Survey Website">
+    <meta name="author"      content="Rohail Iqbal">
+    <title>Book a Tour!</title>
+
+    <!-- Open Graph Protocol -->
+    <!--
+    
+    <meta name="title"       content="title">
+    <meta name="type"        content="website">
+    <meta name="url"         content="">
+    <meta name="description" content="a brief description">
+    <meta name="image"       content="">
+    -->
+
+    <!-- Icons -->
+    
+    <link rel="icon" href="../DunderMifflin_SurveyPage/icon.png">
+    
+    <!-- Include Your CSS files here -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="dunder text-center">
+                    <h1>DUNDER</h1>                                                
+                </div>
+                <div class="mifflin text-center">
+                    <h1>MIFFLIN,</h1>
+                </div>
+                <div class="paper-company text-center">
+                    <p class="paper">Paper Company</p>
+                </div>
+            </div>            
+            <h1 id="title" class="text-center">Welcome To DunderMifflin, Scranton, PA</h1> 
+            <h5 id="detail" class="description text-center">Supplying The Scranton Business Community Since 1947</h5>
+        </header>
+
+        <nav class="navigation">
+            <div class="nav-links ">
+                <div class="nav-home">
+                    <a href="../DunderMifflin_HomePage/index.html">Home</a>
+                </div>
+                <div class="nav-survey">
+                    <a href="../DunderMifflin_SurveyPage/index.html">Survey</a>
+                </div>
+                <div class="nav-tour">
+                    <a href="../DunderMifflin_BookTour/index.html">Book Tour</a>
+                </div>
+                <div class="nav-soon">
+                    <a href="https://www.youtube.com/watch?v=ryxUeWEcUqE">The Michael Scott Paper Company</a>
+                </div>                
+            </div>
+        </nav>
+
+        <main>
+            <div class="form-title">
+                <h1 class="survey-page">Book A Tour</h2>
+            </div>
+
+            <form id="survey-form" action="../DunderMifflin_Booked/index.html" >
+                
+                <div class="form-group">
+                    <label id="name-label" for="name">Full Name<input type="text" id="name" class="form-control" required placeholder="Enter your full name"> </label>
+
+                </div> 
+                <div class="form-group">
+                    <label id="email-label" for="email">Email<input type="email" id="email" class="form-control" required placeholder="Enter your email"> </label>
+
+                </div>      
+                <div class="form-group">
+                    <label id="total-people" for="total-people">Select Total People<span class="clue">(max 10)</span><input type="range" id="total-people" class="form-control" placeholder="Select Number Of People" min="1" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+                    <output>4</output></label>
+                </div>
+                <div class="form-group">
+                    <p>Select Desired Branch For Tour</p>
+                    <select id="most-like" name="mostlike" class="form-control" required>
+                        <option disabled selected value>Select Branch</option>
+                        <option value="scranton">Scranton</option>
+                        <option value="nashua">Nashua</option>
+                        <option value="buffalo">Buffalo</option>
+                        <option value="stamford">Stanford</option>
+                        <option value="binghamton">Binghamton</option>
+                        <option value="rochester">Rochester</option>
+                    </select>
+               </div>
+               <div class="form-group">
+                <label id="date" for="tour-date">Select Date<input type="date" id="tour-date" class="form-control" required></label>
+               </div>
+               <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Book Tour</button>
+               </div>
+               
+            </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html> 
